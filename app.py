@@ -33,7 +33,7 @@ class vale(Resource):
         outputFilename = "vale-"+namefile+".pdf"
         pdf = create_pdf(sourceHtml, outputFilename)
 
-        
+
         #pdf_out = pdf
         #response = make_response(pdf_out)
         #response.headers['Content-Type'] = 'application/pdf'
@@ -58,7 +58,7 @@ def get_hit_count():
 @app.route('/')
 def hello():
     count = get_hit_count()
-    return 'Hello from Azure App Service team! I havee been seen {} times.\n'.format(count)
+    return 'Total {} times.\n'.format(count)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=80, debug=True)
