@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+    {% block body %}
+        <center>
+        <h2>Vale Digital</h2>
+        <table width="70%" cellpadding="4" cellspacing="0" >
+            <tbody>
+                <tr >
+                    <td width="35%" style="border: 1px solid #000000;" ><img src="{{ url_for('static', filename='img.png', _external=True) }}" /></td>
+                    <td width="35%" style="border: 1px solid #000000;">
+                        <b>Repsol S/ {{vale.monto}}</b>
+                        Vale digital para ser usado
+                        como efectivo. Los vales tienen
+                        una vigencia de 6 meses. No
+                        tienen derecho a vuelto. Válido
+                        sólo en locales mencionados.
+                        Imagen referencial.
+                    </td>
+                </tr>
+                <tr >
+                    <td width="35%" style="border: 1px solid #000000;">Número de vale digital</td>
+                    <td width="35%" style="border: 1px solid #000000;">{{vale.numerodigital}}</td>
+                </tr>
+                <tr >
+                    <td width="35%" style="border: 1px solid #000000;">Código</td>
+                    <td width="35%" style="border: 1px solid #000000;">{{vale.code}}</td>
+                </tr>
+                <tr >
+                    <td width="35%" style="border: 1px solid #000000;">Fecha de vencimiento</td>
+                    <td width="35%" style="border: 1px solid #000000;">{{vale.date_expired}}</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <p>
+        <b>¿Cómo usar tu vale digital?</b>
+        Muéstrale el vale digital desde tu smartphone o impreso al representante del comercio.
+        Si tienes dudas llámanos al (01)219-6510 de lunes a viernes, de 9 a.m. a 6 p.m.
+        Usa tus vales digitales en estos locales
+        Puedes ver la lista completa aquí.
+        Av. Venezuela 1820/ Av. Tingo maría No. 994 - Lima
+        Estación Monumental - La Victoria
+        Avenida Prolongación Huaylas 326
+        Estación Tronco Firme - Chorrillos
+        Av. Nicolás de Piérola -1251-Urb. Santa Ines
+        Estación San Fernando - Trujillo
+        Urb. La Quinta Umacollo Cal. Ricardo Palma 504-502
+        Estación Nuevo Sol - Arequipa        
+        </p>
+        </center>
+    {% endblock %}
+    </body>
+</html>
