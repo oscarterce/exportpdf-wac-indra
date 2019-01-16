@@ -32,6 +32,7 @@ class vale(Resource):
         namefile=str(time.time())
         outputFilename = "vale-"+namefile+".pdf"
         pdf = create_pdf(sourceHtml, outputFilename)
+
         
         #pdf_out = pdf
         #response = make_response(pdf_out)
