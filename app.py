@@ -32,7 +32,7 @@ api.add_resource(vale, '/api/vale/<int:vale_id>')
 
 @app.route('/')
 def hello():
-    return 'Hello'
+    return 'Hi!'
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=80, debug=True)
